@@ -1,0 +1,192 @@
+/*Importa a fonte "Bona Nova" do Google Fonts para ser utilizada no documento.*/
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova&display=swap');
+
+/* Define um estilo para todos os elementos, removendo o padding e a margem padrão e definindo a fonte "Bona Nova" 
+como a fonte padrão para todo o documento.*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Bona Nova', serif;
+}
+
+/* Define a cor de fundo do corpo do documento como "#fcde67".*/
+body{
+    background-color: #fcde67;
+}
+
+/* Define o estilo para a classe "main", que define a largura como 80% do elemento pai, 
+  centraliza horizontalmente o elemento com "margin: 0 auto" e alinha o texto ao centro.*/
+.main{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Define o estilo para os elementos h1 dentro da classe "heading".
+   Define a cor do texto como "#030e12", o tamanho da fonte como 48px, o peso da fonte como 900, 
+   o espaçamento entre letras como 1px, adiciona um espaçamento superior de 2rem e uma margem de 1rem.*/
+.heading h1{
+    color: #030e12;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding-top: 2rem;
+    margin: 1rem;
+}
+
+/* Define o estilo para a classe "search-bar", que define as margens superior e inferior como 1rem, 
+   a largura como 400px, a altura como 40px, remove a borda e o contorno, define um raio de borda de 1rem e 
+   adiciona um espaçamento interno de 0.3rem no topo e na base e 1rem nas laterais.*/
+.search-bar{
+    margin: 1rem 0;
+    width: 400px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    padding: 0.3rem 1rem;
+}
+
+/* Define o estilo para a classe "container", que define a largura como 80% do elemento pai, centraliza horizontalmente 
+   o elemento com "margin: 25px auto", cria uma grade utilizando o sistema de grid com colunas que se ajustam 
+   automaticamente ao tamanho do conteúdo mínimo de 150px e no máximo ocupam todo o espaço disponível (1fr), 
+   e adiciona um espaçamento de 2rem entre as células da grade.*/
+.container{
+    width: 80%;
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    grid-gap: 2rem;
+}
+
+/* Estiliza a classe "card" que representa um cartão.
+   Define a largura do cartão como 180px.
+   Define o raio de borda do cartão como 1rem, criando bordas arredondadas.
+   Define a cor de fundo do cartão como preto.
+   Adiciona um espaçamento interno de 5px ao conteúdo do cartão.*/
+.card{
+    width: 180px;
+    border-radius: 1rem;
+    background-color: black;
+    padding: 5px;
+}
+
+/* Estiliza as tags "img".
+   Define a largura da imagem como 100% do contêiner pai, fazendo com que a imagem ocupe todo o espaço disponível.
+   Define o raio de borda superior esquerdo e superior direito da imagem como 1rem, criando bordas arredondadas apenas no canto superior.*/
+img{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+/* Estiliza os elementos "h3" dentro da classe "card".
+   Define a cor do texto como branco.
+   Define o tamanho da fonte como 18px.*/
+.card h3{
+    color: white;
+    font-size: 18px;
+}
+
+/* Estiliza a classe "indexContainer".
+   Define o valor da propriedade "display" como "flex", permitindo que os elementos filhos sejam posicionados em uma linha.
+   Define uma margem superior e inferior de 2.5rem para o container.*/
+.indexContainer{
+    display: flex;
+    margin: 2.5rem 0;
+}
+
+/* Estiliza a classe "numbox".
+   Define a largura do elemento como 50px e a altura como 40px.
+   Define a cor de fundo como preto.
+   Utiliza o modelo flex para centralizar verticalmente e horizontalmente o conteúdo dentro do elemento.
+   Define a cor do texto como branco.
+   Define uma margem de 5px na direita e na esquerda, e nenhuma margem no topo e na base.*/
+.numbox{
+    width: 50px;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 0 5px 0 5px;
+}
+
+/* Estiliza as tags "img" dentro da classe "content".
+   Define a largura da imagem como 100% do contentor pai, fazendo com que a imagem ocupe todo o espaço disponível.
+   Define a altura da imagem como 600px.*/
+.content img{
+    width: 100%;
+    height: 600px;
+}
+
+/* Estiliza os elementos com a classe "inner-content" dentro da classe "content".
+   Define a posição do elemento como absoluta.
+   Define o topo do elemento como 45% da altura do contentor pai.
+   Define a esquerda do elemento como 50% da largura do contentor pai.
+   Utiliza a função "translate" para centralizar verticalmente e horizontalmente o elemento.
+   Define a cor de fundo do elemento como um branco semi-transparente.
+   Define a cor do texto como preto.
+   Define o tamanho da fonte como 1.5rem.
+   Adiciona um espaçamento interno de 2rem ao conteúdo do elemento.
+   Alinha o texto ao centro.
+   Adiciona uma sombra ao elemento com deslocamento vertical de 5px, deslocamento horizontal de 5px e cor preta com transparência.*/
+.content .inner-content{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255, 0.8);
+    color: black;
+    font: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 5px rgb(0,0,0,0.5);
+}
+
+/* Estiliza a classe "recipe-details".
+  Define a largura do elemento como 70% do contentor pai.
+  Define uma margem superior e inferior de 2rem e margem esquerda e direita automáticas para centralizar horizontalmente o elemento.
+  Utiliza o modelo flex para distribuir o espaço disponível entre os elementos filhos.
+  Centraliza verticalmente os elementos filhos.*/
+.recipe-details{
+    width: 70%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+/* Estiliza as classes "ingredients" e "instructions".
+   Define a largura flexível dos elementos como 50% do contentor pai.
+   Define o alinhamento do texto como justificado.*/
+.ingredients,.instructions{
+    flex-basis: 50%;
+    text-align: justify;
+}
+
+/* Estiliza os elementos "h4" dentro da classe "ingredients".
+   Define uma margem superior de 1.5rem para o elemento.
+   Define o peso da fonte como negrito.*/
+.ingredients h4{
+    margin-top: 1.5rem;
+    font-weight: bold;
+}
+
+
+/* Estiliza as tags "iframe".
+   Define a altura do iframe como 515px.
+   Define a largura do iframe como 100% do contentor pai.*/
+iframe{
+    height: 515px;
+    width: 100%;
+}
+
+/* Estiliza a classe "video".
+   Define a largura do elemento como 80% do contêiner pai.
+   Centraliza horizontalmente o elemento com margens automáticas.
+   Define uma margem superior e inferior de 3rem para o elemento.*/
+.video{
+    width: 80%;
+    margin: 3rem auto;
+}
